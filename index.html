@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-           background-color: #f9e1e6; /* Rosa suave */
+            background-color: #f9e1e6; /* Rosa suave */
             margin: 0;
             padding: 0;
             color: #333;
@@ -20,7 +20,7 @@
             overflow: hidden;
         }
         header {
-           max-width: 900px;
+            max-width: 900px;
             margin: 20px;
             padding: 30px;
             background-color: #fff;
@@ -28,16 +28,15 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             animation: fadeIn 2s ease-out;
         }
-      /*titulos*/
-       h1, h2{
-          text-align: center;
+        h1, h2 {
+            text-align: center;
             color: #ff6b81; /* Rosa vibrante */
             opacity: 0;
             animation: fadeInText 1s forwards;
-       }
+        }
         header h1 {
-           font-size: 2.5rem;
-           animation-delay: 0.5s;
+            font-size: 2.5rem;
+            animation-delay: 0.5s;
             margin: 0;
         }
         nav {
@@ -77,8 +76,8 @@
             margin-top: 20px;
         }
         .section h2 {
-           font-size: 2rem;
-           animation-delay: 1s;
+            font-size: 2rem;
+            animation-delay: 1s;
             color: #333;
             margin-top: 30px;
         }
@@ -100,6 +99,15 @@
             width: 100%;
             bottom: 0;
         }
+        /* Animaciones */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -118,7 +126,7 @@
     <div class="content">
         <section id="about" class="section about">
             <h2>Acerca de mí</h2>
-            <img src="fondo.jpeg" alt="fondo.jpeg">
+            <img src="fondo.jpeg" alt="Imagen de fondo" />
             <p>Soy estudiante de Ingeniería de Sistemas e Informática. Me apasiona la programación y las nuevas tecnologías. Busco constantemente mejorar mis habilidades y aprender nuevas herramientas para resolver problemas de forma eficiente y creativa.</p>
         </section>
 
@@ -127,11 +135,11 @@
             <div class="skills">
                 <div>
                     <h3>Programación</h3>
-                    <p>Dominio de lenguajes como Java, Python, C++, y visulCode.</p>
+                    <p>Dominio de lenguajes como Java, Python, C++, y Visual Studio Code.</p>
                 </div>
                 <div>
                     <h3>Desarrollo Web</h3>
-                    <p>Experiencia en HTML, CSS,bases de datos SQL.</p>
+                    <p>Experiencia en HTML, CSS, y bases de datos SQL.</p>
                 </div>
                 <div>
                     <h3>Gestión de Proyectos</h3>
@@ -145,7 +153,7 @@
             <div class="projects">
                 <div>
                     <h3>Aplicación Web para mejorar la salud MoviFit</h3>
-                    <p>Desarrollé una aplicación web utilizando html que permite a los usuarios reservar sus horarios de atencion, con funciones de recordatorio y seguimiento de su reabilitacion fisica.</p>
+                    <p>Desarrollé una aplicación web utilizando HTML que permite a los usuarios reservar sus horarios de atención, con funciones de recordatorio y seguimiento de su rehabilitación física.</p>
                 </div>
                 <div>
                     <h3>Sistema de Inventarios Mundo Gatitos</h3>
@@ -156,26 +164,25 @@
 
         <section id="contact" class="section">
             <h2>Contacto</h2>
-            <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo a <a href="vivianacayoalanoca@gmail.com">vivianacayoalanoca@gmail.com</a>.</p>
+            <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo a <a href="mailto:vivianacayoalanoca@gmail.com">vivianacayoalanoca@gmail.com</a>.</p>
         </section>
     </div>
-     <!-- Sección de contacto -->
-        <div class="contact">
-            <p>¿Quieres saber más sobre mí? Contáctame:</p>
-            <p>Teléfono: <strong>(+591) 65414828</strong></p>
-            <!-- Redes Sociales -->
+
+    <!-- Sección de contacto adicional -->
+    <div class="contact">
+        <p>¿Quieres saber más sobre mí? Contáctame:</p>
+        <p>Teléfono: <strong>(+591) 65414828</strong></p>
+        <!-- Redes Sociales -->
         <div class="social-links">
             <a href="https://www.facebook.com/" target="_blank">F</a>
             <a href="https://www.tiktok.com/parati" target="_blank">T</a>
-            <a href="en/viviana-cayo-alanoca-04079a340" target="_blank">L</a>
+            <a href="https://www.linkedin.com/in/viviana-cayo-alanoca-04079a340" target="_blank">L</a>
             <a href="https://www.instagram.com/" target="_blank">I</a>
         </div>
     </div>
+
     <footer>
         <p>&copy; 2024 - Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
-
-        </body>
-        </html>
