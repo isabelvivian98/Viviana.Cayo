@@ -8,18 +8,36 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: #FF00FF;
+           background-color: #f9e1e6; /* Rosa suave */
+            margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
+           max-width: 900px;
+            margin: 20px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-out;
         }
+      /*titulos*/
+       h1, h2{
+          text-align: center;
+            color: #ff6b81; /* Rosa vibrante */
+            opacity: 0;
+            animation: fadeInText 1s forwards;
+       }
         header h1 {
+           font-size: 2.5rem;
+           animation-delay: 0.5s;
             margin: 0;
         }
         nav {
@@ -55,16 +73,23 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
+            text-align: center;
+            margin-top: 20px;
         }
         .section h2 {
+           font-size: 2rem;
+           animation-delay: 1s;
             color: #333;
-            margin-bottom: 10px;
+            margin-top: 30px;
         }
         .skills div, .projects div {
             background-color: #f9e1e6;
+            color: white;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInText 1s forwards;
         }
         footer {
             background-color: #333;
@@ -138,16 +163,14 @@
         <div class="contact">
             <p>¿Quieres saber más sobre mí? Contáctame:</p>
             <p>Teléfono: <strong>(+591) 65414828</strong></p>
-        </div>
-
-        <!-- Redes Sociales -->
+            <!-- Redes Sociales -->
         <div class="social-links">
             <a href="https://www.facebook.com/" target="_blank">F</a>
             <a href="https://www.tiktok.com/parati" target="_blank">T</a>
             <a href="en/viviana-cayo-alanoca-04079a340" target="_blank">L</a>
             <a href="https://www.instagram.com/" target="_blank">I</a>
         </div>
-
+    </div>
     <footer>
         <p>&copy; 2024 - Todos los derechos reservados</p>
     </footer>
