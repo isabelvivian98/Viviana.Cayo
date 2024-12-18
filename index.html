@@ -8,56 +8,57 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #111; /* Fondo negro */
-            color: #fff; /* Texto blanco */
+            background-color: #f9e1e6; /* Rosa suave */
             margin: 0;
             padding: 0;
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
         }
         header {
             max-width: 900px;
             margin: 20px;
             padding: 30px;
-            background-color: #222; /* Fondo gris oscuro */
+            background-color: #fff;
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-out;
+        }
+        /*titulos*/
+        h1, h2{
             text-align: center;
+            color: #ff6b81; /* Rosa vibrante */
+            opacity: 0;
+            animation: fadeInText 1s forwards;
         }
         header h1 {
-            font-size: 3rem;
-            color: #ff6b81; /* Rosa vibrante */
+            font-size: 2.5rem;
+            animation-delay: 0.5s;
             margin: 0;
-        }
-        header p {
-            font-size: 1.2rem;
-            color: #fff;
-            margin-top: 10px;
         }
         nav {
             text-align: center;
-            background-color: #222; /* Fondo gris oscuro */
+            background-color: #f9e1e6;
             padding: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         nav a {
-            color: #ff6b81; /* Rosa vibrante */
+            color: #333;
             margin: 0 15px;
             text-decoration: none;
             font-size: 18px;
         }
         nav a:hover {
             text-decoration: underline;
-            color: #fff; /* Texto blanco al pasar el ratón */
         }
         .content {
             padding: 40px 20px;
             max-width: 1000px;
-            margin: 20px auto;
+            margin: 0 auto;
         }
         .section {
             margin-bottom: 40px;
@@ -67,7 +68,6 @@
             height: 150px;
             border-radius: 50%;
             margin-bottom: 20px;
-            border: 5px solid #ff6b81; /* Borde rosa alrededor de la imagen */
         }
         .skills, .projects {
             display: grid;
@@ -76,30 +76,48 @@
             text-align: center;
             margin-top: 20px;
         }
+        .section h2 {
+            font-size: 2rem;
+            animation-delay: 1s;
+            color: #333;
+            margin-top: 30px;
+        }
         .skills div, .projects div {
-            background-color: #333; /* Fondo gris oscuro */
-            color: #fff; /* Texto blanco */
+            background-color: #f9e1e6;
+            color: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInText 1s forwards;
         }
         footer {
-            background-color: #111; /* Fondo negro */
-            color: #ff6b81; /* Rosa vibrante */
+            background-color: #333;
+            color: #f9e1e6;
             text-align: center;
             padding: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
         }
-        .social-links a {
-            color: #ff6b81;
-            margin: 0 10px;
-            font-size: 1.5rem;
+
+        /* Estilo para el botón de descarga */
+        .cv-button {
+            display: inline-block;
+            background-color: #ff6b81; /* Rosa vibrante */
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
             text-decoration: none;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
         }
-        .social-links a:hover {
-            color: #fff; /* Cambiar color al pasar el ratón */
+
+        .cv-button:hover {
+            background-color: #ff4d5c; /* Cambio de color al pasar el ratón */
         }
     </style>
 </head>
@@ -119,7 +137,7 @@
     <div class="content">
         <section id="about" class="section about">
             <h2>Acerca de mí</h2>
-            <img src="fondo.jpeg" alt="Imagen de fondo" />
+            <img src="fondo.jpeg" alt="fondo.jpeg">
             <p>Soy estudiante de Ingeniería de Sistemas e Informática. Me apasiona la programación y las nuevas tecnologías. Busco constantemente mejorar mis habilidades y aprender nuevas herramientas para resolver problemas de forma eficiente y creativa.</p>
         </section>
 
@@ -132,7 +150,7 @@
                 </div>
                 <div>
                     <h3>Desarrollo Web</h3>
-                    <p>Experiencia en HTML, CSS, y bases de datos SQL.</p>
+                    <p>Experiencia en HTML, CSS, bases de datos SQL.</p>
                 </div>
                 <div>
                     <h3>Gestión de Proyectos</h3>
@@ -158,20 +176,13 @@
         <section id="contact" class="section">
             <h2>Contacto</h2>
             <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo a <a href="mailto:vivianacayoalanoca@gmail.com" style="color: #ff6b81;">vivianacayoalanoca@gmail.com</a>.</p>
-        </section>
-    </div>
 
-    <!-- Sección de contacto adicional -->
-    <div class="contact">
-        <p>¿Quieres saber más sobre mí? Contáctame:</p>
-        <p>Teléfono: <strong>(+591) 65414828</strong></p>
-        <!-- Redes Sociales -->
-        <div class="social-links">
-            <a href="https://www.facebook.com/" target="_blank">F</a>
-            <a href="https://www.tiktok.com/parati" target="_blank">T</a>
-            <a href="https://www.linkedin.com/in/viviana-cayo-alanoca-04079a340" target="_blank">L</a>
-            <a href="https://www.instagram.com/" target="_blank">I</a>
-        </div>
+            <!-- Botón para descargar CV -->
+            <a href="ruta-a-tu-cv.pdf" download="CV_Viviana_Cayo" class="cv-button">Descargar mi CV</a>
+
+            <!-- Enlace a CV en línea -->
+            <p>También puedes ver mi CV en línea: <a href="https://www.tu-enlace.com" target="_blank" class="cv-button">Ver mi CV en línea</a></p>
+        </section>
     </div>
 
     <footer>
@@ -179,4 +190,5 @@
     </footer>
 </body>
 </html>
+
 
